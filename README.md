@@ -31,7 +31,7 @@ Follow these steps to install and set up the project on your local machine:
 
     ```sh
     git clone https://github.com/Nitin2806/CondorMarket-Backend.git
-    cd condor-market-backend
+    cd CondorMarket-Backend
     ```
 
 2. **Install dependencies:**
