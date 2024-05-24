@@ -9,6 +9,7 @@ Welcome to the Condor Market backend project. This README will guide you through
   - [Introduction](#introduction)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+  - [Project Directory Structure](#project-directory-structure)
   - [Running the Project](#running-the-project)
 
 ## Introduction
@@ -53,6 +54,7 @@ Follow these steps to install and set up the project on your local machine:
     MONGODB_URI=your mongodb project url
     JWT_SECRET=your jwt secret key
     ```
+## Project Directory Structure
 
 ## Running the Project
 
