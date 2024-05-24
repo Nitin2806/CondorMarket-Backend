@@ -4,13 +4,12 @@ Welcome to the Condor Market backend project. This README will guide you through
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Running the Project](#running-the-project)
-- [Environment Variables](#environment-variables)
-- [Contributing](#contributing)
-- [License](#license)
+- [Condor Market - Ecommerce Backend](#condor-market---ecommerce-backend)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Project](#running-the-project)
 
 ## Introduction
 
@@ -31,7 +30,7 @@ Follow these steps to install and set up the project on your local machine:
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/yourusername/condor-market-backend.git
+    git clone https://github.com/Nitin2806/CondorMarket-Backend.git
     cd condor-market-backend
     ```
 
