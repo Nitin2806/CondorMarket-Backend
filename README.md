@@ -1,10 +1,10 @@
-# Condor Market - Ecommerce Backend
+# Condor Market - Backend
 
 Welcome to the Condor Market backend project. This README will guide you through the installation and setup process.
 
 ## Table of Contents
 
-- [Condor Market - Ecommerce Backend](#condor-market---ecommerce-backend)
+- [Condor Market - Backend](#condor-market---backend)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Prerequisites](#prerequisites)
