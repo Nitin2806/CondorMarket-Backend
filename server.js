@@ -3,7 +3,11 @@ const mongoose = require('mongoose');
 const productRoutes = require('./routes/products');
 const userRoutes = require('./routes/users');
 const app = express();
+require('dotenv').config()
 const PORT = process.env.PORT || 3000;
+
+const env= process.env;
+
 
 // Middleware
 app.use(express.json());
@@ -13,7 +17,7 @@ app.use('/products', productRoutes);
 app.use('/users', userRoutes);
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://nitin2806:admin@nitin.ffkelle.mongodb.net/?retryWrites=true&w=majority&appName=nitin').then(() => {
+mongoose.connect(env.MONGO_URL).then(() => {
   console.log('Connected to MongoDB');
 }).catch(err => {
   console.error('Could not connect to MongoDB:', err);
