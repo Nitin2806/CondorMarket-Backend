@@ -3,6 +3,8 @@ const router = express.Router();
 const User = require('../models/users');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+require('dotenv').config()
+const env= process.env;
 
 // Register a new user
 router.post('/register', async (req, res) => {
@@ -40,7 +42,7 @@ router.post('/login', async (req, res) => {
       return res.status(400).json({ message: 'Invalid password' });
     }
 
-    const token = jwt.sign({ id: user._id }, 'your_jwt_secret', {
+    const token = jwt.sign({ id: user._id },env.JWT_SECRET, {
       expiresIn: '1h'
     });
 
@@ -61,7 +63,7 @@ router.post('/login', async (req, res) => {
 router.get('/profile', async (req, res) => {
   const token = req.header('Authorization').replace('Bearer ', '');
   try {
-    const decoded = jwt.verify(token, 'your_jwt_secret');
+    const decoded = jwt.verify(token, env.JWT_SECRET);
     const user = await User.findById(decoded.id).select('-password');
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
