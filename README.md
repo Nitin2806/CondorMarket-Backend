@@ -50,8 +50,8 @@ Follow these steps to install and set up the project on your local machine:
 
     ```plaintext
     PORT=3000
-    MONGODB_URI=mongodb://localhost:27017/condor-market
-    JWT_SECRET=your_jwt_secret
+    MONGODB_URI=your mongodb project url
+    JWT_SECRET=your jwt secret key
     ```
 
 ## Running the Project
