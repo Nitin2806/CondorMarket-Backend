@@ -56,6 +56,8 @@ Follow these steps to install and set up the project on your local machine:
     ```
 ## Project Directory Structure
 
+![Project Structure Image](images/project-structure.png)
+
 ## Running the Project
 
 To start the server, run the following command:
