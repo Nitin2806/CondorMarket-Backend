@@ -27,7 +27,21 @@ mongoose.connect(env.MONGO_URL).then(() => {
 
 //default route
 app.get('/', (req, res) => {
-  res.send('Welcome to the e-commerce backend!');
+  const routes = {
+    '/products': {
+        'GET': 'Get all products',
+        'POST': 'Create a new product'
+    },
+    '/products/:id': {
+        'GET': 'Get a product by ID',
+        'PUT': 'Update a product',
+        'DELETE': 'Delete a product'
+    },
+    '/users/register': 'Register a new user',
+    '/users/login': 'Authenticate user and get token',
+    '/users/profile': 'Get user profile (requires authentication)'
+};
+res.json(routes);
 });
 
 // Server
