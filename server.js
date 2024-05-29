@@ -29,20 +29,40 @@ mongoose.connect(env.MONGO_URL).then(() => {
 app.get('/', (req, res) => {
   const routes = {
     '/products': {
-        'GET': 'Get all products',
-        'POST': 'Create a new product'
+      'GET': 'Get all products',
+      'POST': 'Create a new product'
     },
     '/products/:id': {
-        'GET': 'Get a product by ID',
-        'PUT': 'Update a product',
-        'DELETE': 'Delete a product'
+      'GET': 'Get a product by ID',
+      'PUT': 'Update a product',
+      'DELETE': 'Delete a product'
     },
     '/users/register': 'Register a new user',
     '/users/login': 'Authenticate user and get token',
     '/users/profile': 'Get user profile (requires authentication)'
-};
-res.json(routes);
+  };
+
+  let html = '<!DOCTYPE html><html><head><title>API Routes</title></head><body>';
+  html += '<h1>API Routes</h1>';
+
+  for (const route in routes) {
+    html += `<h2>${route}</h2>`;
+    if (typeof routes[route] === 'object') {
+      html += '<ul>';
+      for (const method in routes[route]) {
+        html += `<li><strong>${method}</strong>: ${routes[route][method]}</li>`;
+      }
+      html += '</ul>';
+    } else {
+      html += `<p>${routes[route]}</p>`;
+    }
+  }
+
+  html += '</body></html>';
+
+  res.send(html);
 });
+
 
 // Server
 app.listen(PORT, () => {
