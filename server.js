@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
     '/orders/:id': {
       'GET': 'Get a order by ID',
       'PUT': 'Update a order',
-      'DELETE': 'Delete a product'
+      'DELETE': 'Delete a order'
     },
     '/users/register': 'Register a new user',
     '/users/login': 'Authenticate user and get token',
