@@ -40,6 +40,15 @@ app.get('/', (req, res) => {
       'PUT': 'Update a product',
       'DELETE': 'Delete a product'
     },
+    '/orders': {
+      'GET': 'Get all orders',
+      'POST': 'Create a new order'
+    },
+    '/orders/:id': {
+      'GET': 'Get a order by ID',
+      'PUT': 'Update a order',
+      'DELETE': 'Delete a product'
+    },
     '/users/register': 'Register a new user',
     '/users/login': 'Authenticate user and get token',
     '/users/profile': 'Get user profile (requires authentication)'
