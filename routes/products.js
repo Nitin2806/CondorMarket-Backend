@@ -42,7 +42,6 @@ router.post('/', async (req, res) => {
 // Update a product
 router.put('/:id', async (req, res) => {
   try {
-    console.log(req.body)
     const product = await Product.findByIdAndUpdate(req.params.id,  { $set: req.body }, { new: true });
     if (!product) return res.status(404).json({ message: 'Product not found' });
     console.log(product)

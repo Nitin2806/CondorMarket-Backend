@@ -54,7 +54,27 @@ Follow these steps to install and set up the project on your local machine:
     MONGODB_URI=your mongodb project url
     JWT_SECRET=your jwt secret key
     ```
+
 ## Project Directory Structure
+
+backend/
+├── images/
+├── models/
+│   ├── order.js
+│   ├── products.js
+│   └── users.js
+├── node_modules/
+├── routes/
+│   ├── orders.js
+│   ├── products.js
+│   └── users.js
+├── .env
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── README.md
+└── server.js
+
 
 ![Project Structure Image](images/project-structure.png)
 
